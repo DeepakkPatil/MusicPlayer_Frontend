@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Sansita+Swashed:wght@500&display=swap");
+/* This is done to import a family called Poppins just replace Poppins by any other to import that font */
+
+*{
+    padding:0 ;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins',sans-serif ;
+    width: 100%;
+    height: 100vh;
+    background: #121213 ;
+
+    /* To center the element METHOD1 */
+
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */ 
+
+    /* METHOD2 */
+
+    display: grid;
+    place-items: center;
+}
+
+header{
+    height: 95%;
+    width: 85%;
+    /* border: 1px solid #fff; */
+
+    display: flex; 
+    /* kyoki apn ko side by side show krna h */
+ /* flex wrap wrap isliye use kra kyoki hme 3rd wla master-play neeche chahiye */
+    flex-wrap: wrap;
+
+}
+
+header .menu-side, .song-side{
+
+    width:25% ;
+    height: 90%;
+    /* border: 1px solid white; */
+    background: #111727;
+    box-shadow: 5px 0px 2px #090f1f ;
+    color:#fff ;
+}
+
+header .song-side{
+    width: 75%;
+    background: #0b1320;
+}
+header .master-play{
+    width: 100%;
+    height: 10%;
+    background: #111727;
+    
+    box-shadow: 0px 3px 8px #090f1f ;
+}
+
+header .menu-side h1{
+    font-size: 20px;
+    margin: 15px 0px 0px 20px;
+    font-weight: 500;
+}
+
+
+header .menu-side .playlist {
+
+  margin: 40px 0px 0px 20px;
+    font-size: 14px;
+}
+
+header .menu-side .playlist h4 {
+
+    font-size: 15px;
+    font-weight: 400;
+    padding-bottom: 10px;
+    color: #4c5262;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: 0.3s linear;
+}
+
+header .menu-side .playlist h4 :hover{
+
+    color: #fff;
+}
+
+header .menu-side .playlist h4 span{
+
+position: relative;
+margin-right: 35px;
+}
+
+header .menu-side .playlist h4 span::before{
+
+/* this is used to add  circle due to content and border and border radius */
+
+content: ' ';
+position: absolute;
+width: 4px;
+height: 4px;
+border: 2px solid #4c5262;
+border-radius: 50%;
+top: -4px;
+
+transition: 0.3 linear;
+}
+
+header .menu-side .playlist h4:hover span::before{
+
+border: 2px solid #fff;
+border-radius: 50%;
+top: -4px;
+transition: 0.3 linear;
+}
+
+header .menu-side .playlist h4 .fa-music{
+
+/* jo active h vahi sirf dikhega */
+    display: none;
+
+}
+
+header .menu-side .playlist  .active {
+
+   color: #36e2ec;
+
+}
+
+header .menu-side .playlist  .active span{
+ 
+ /* isse jo circle jo h vo active wle pr nhi ayega */
+   display: none;
+
+}
+
+header .menu-side .playlist  .active .fa-music{
+
+/* active wle m music icon dikhna chahiye */
+
+   display: flex;
+    margin-right: 20px;
+}
