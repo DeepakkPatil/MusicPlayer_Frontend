@@ -71,16 +71,16 @@ header .menu-side h1 {
     align-items: center;
 }
 
-header .menu-side h1 img{
+header .menu-side h1 img {
     width: 20%;
     height: 20%;
     margin-right: 10%;
-   border-radius: 50%;
+    border-radius: 50%;
 }
 
-header .menu-side h1:hover img{
-   
-    animation: flip ;
+header .menu-side h1:hover img {
+
+    animation: flip;
     animation-duration: 0.5s;
 }
 
@@ -206,13 +206,16 @@ header .menu-side .menu_song li:hover {
 
     background: rgb(105, 105, 105);
 }
-header .menu-side .menu_song li:hover span{
+
+header .menu-side .menu_song li:hover span {
     color: #fff;
 }
-header .menu-side .menu_song li:hover h5 .subtitle{
+
+header .menu-side .menu_song li:hover h5 .subtitle {
     color: #fff;
 }
-header .menu-side .menu_song li:hover i{
+
+header .menu-side .menu_song li:hover i {
     color: orange
 }
 
@@ -392,7 +395,7 @@ header .master-play span {
     color: #fff;
     width: 40px;
     font-size: 12px;
-    
+
 }
 
 
@@ -404,7 +407,7 @@ header .master-play .bar {
     height: 2px;
     background: rgb(105, 105, 170, 0.1);
     margin: 0px 15px 0px 10px;
-    
+
 }
 
 /* bar2 se prorgess dikhegi blue shade wli */
@@ -453,16 +456,16 @@ header .master-play .bar input {
     cursor: pointer;
     z-index: 99999;
 
-    /* isse progress bar dikhega nhi imput wla */
+    /* isse progress bar dikhega nhi input wla */
     opacity: 0;
 }
 
-
-header .master-play .fa-solid {
+/* this is for like the song */
+header .master-play .fa-regular {
     color: #fff;
-cursor: pointer;
-margin-right: 10px;
-transition: 0.3s linear;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: 0.3s linear;
 }
 
 header .master-play .vol {
@@ -525,8 +528,8 @@ header .song-side::before {
     content: '';
     position: absolute;
     width: 30%;
-    right:  10%;
-    top: 10% ;
+    right: 10%;
+    top: 10%;
     opacity: 0.9;
     height: 33%;
     background: url(bg.png);
@@ -576,28 +579,28 @@ header .song-side nav ul li:nth-child(1) {
 
 /* Jo current active h usme underline bhi dikhega  jese discover */
 header .song-side nav ul li span {
-   
-   position: absolute;
-   width: 100%;
-   height: 2.5px;
-   background: #36e2ec;
-    bottom: -5px ;
+
+    position: absolute;
+    width: 100%;
+    height: 2.5px;
+    background: #36e2ec;
+    bottom: -5px;
     left: 0;
     border-radius: 20px;
 }
 
 
 /* so that header appears on topmost layer  */
-header  {
+header {
     z-index: 999999999999999999;
 }
- 
 
- /* SEARCH SECTION */
+
+/* SEARCH SECTION */
 header .song-side nav .search {
-   
-   position: relative;
-   width: 35%;
+
+    position: relative;
+    width: 35%;
     border-radius: 20px;
     border: 1px solid #fff;
     color: gray;
@@ -605,43 +608,46 @@ header .song-side nav .search {
 
 /* isse hmne search wle ka background blur krdiya  */
 
-header .song-side nav .search::before{
-   
- content: '';
- position: absolute;
- width: 100%;
- height: 100%;
- background: rgb(184, 184, 184,0.1);
- border-radius: 20px;
+header .song-side nav .search::before {
 
- /* backdrop-filter is apn background ko blur kr skte h */
- backdrop-filter: blur(5px);
- z-index: -1 ;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgb(184, 184, 184, 0.1);
+    border-radius: 20px;
+
+    /* backdrop-filter is apn background ko blur kr skte h */
+    backdrop-filter: blur(5px);
+    z-index: -1;
 }
 
+/* bell ke liye set kr rhe size*/
+header .song-side nav .fa-solid {
 
-header .song-side nav  .fa-solid{
-    
-font-size: 13px;
-padding: 3px 0px 0px 10px;
+    font-size: 13px;
+    padding: 3px 0px 0px 10px;
 }
 
-header .song-side nav .bell{
-position: relative;
+/* set relative because the badge should appear over this bell to this  */
+header .song-side nav .bell {
+    position: relative;
 }
 
-header .song-side nav .bell:hover .fa-solid{
-    border-radius: 50%;
+header .song-side nav .bell:hover .fa-solid {
+
     animation: swing;
     animation-duration: 0.5s;
 }
 
-header .song-side nav .bell  .fa-solid{
+header .song-side nav .bell .fa-solid {
 
-font-size: 20px;
+    font-size: 20px;
 }
 
-header .song-side nav .bell  .badge{
+
+/* for badge over bell icon postion should be absoulte with respect to bell */
+header .song-side nav .bell .badge {
 
     background-color: red;
     width: 7px;
@@ -653,132 +659,145 @@ header .song-side nav .bell  .badge{
 
 
 
-header .song-side nav .search input{
-background: none;
-border: none;
-outline: none;
-padding: 0px 10px;
-color: #fff;
-font-size: 12px;
-z-index: 1;
+header .song-side nav .search input {
+    background: none;
+    border: none;
+    outline: none;
+    padding: 0px 10px;
+    color: #fff;
+    font-size: 12px;
+    z-index: 1;
 }
 
 /* user image in circle */
-header .song-side nav .user{
+header .song-side nav .user {
 
-position: relative;
-width: 40px;
-height: 40px;
-border-radius: 50%;
-}
-header .song-side nav .user img{
-
-width: 100%;
-height: 100%;
-border-radius: 50%;
-opacity: 0.9;
-box-shadow: inset 2px 2px 8px #121213;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
 }
 
+header .song-side nav .user img {
 
-header .song-side .content{
-
-width: 90%;
-height: 33%;
-margin: auto;
-padding-top: 30px ;
-}
-
-header .song-side .content h1{
-font-size: 25px ;
-font-weight: 600;
-
-}
-header .song-side .content p{
-font-size: 11px ;
-font-weight: 400;
-color: #4c5262;
-margin: 5px;
-}
-header .song-side .content .buttons{
-margin-top: 25px;
-}
-header .song-side .content .buttons button{
-height: 30px;
-width: 130px;
-border: 2px solid #36e2ec;
-outline: none;
-border-radius: 20px;
-background: #51dae0;
-color: #fff;
-cursor:pointer;
-transition: 0.3s linear;
-}
-header .song-side .content .buttons button:hover{
-background: none;
-color: #36e2ec;
-}
-header .song-side .content .buttons button:nth-child(2){
-background: none;
-color: #36e2ec;
-}
-header .song-side .content .buttons button:nth-child(2):hover{
-background: #36e2ec;
-color: #fff;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    opacity: 0.9;
+    box-shadow: inset 2px 2px 8px #121213;
 }
 
-header .song-side .popular{
-width: 60vw;
-height: auto;
-margin: auto;
-margin-top: 15px;
+
+header .song-side .content {
+
+    width: 90%;
+    height: 33%;
+    margin: auto;
+    padding-top: 30px;
+    text-overflow: ellipsis;
 }
-header .song-side .popular .h4{
-display: flex;
-align-items: center;
-justify-content: space-between;
-}
-header .song-side .popular .h4 .fa-solid{
-color: #a4a8b4;
-cursor: pointer;
-margin-right: 10px;
-transition: 0.3s linear;
-}
-header .song-side .popular .h4 .fa-solid:hover{
-color: #fff;
+
+header .song-side .content h1 {
+    font-size: 25px;
+    font-weight: 600;
 
 }
 
-header .song-side .popular .pop_song{
-width: 100%;
-height: 120px;
-margin-top: 15px;
-display: flex;
-overflow: auto;
-scroll-behavior: smooth;
+header .song-side .content p {
+    font-size: 11px;
+    font-weight: 400;
+    color: #4c5262;
+    margin: 5px;
+}
+
+header .song-side .content .buttons {
+    margin-top: 25px;
+}
+
+header .song-side .content .buttons button {
+    height: 30px;
+    width: 130px;
+    border: 2px solid #36e2ec;
+    outline: none;
+    border-radius: 20px;
+    background: #51dae0;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s linear;
+}
+
+header .song-side .content .buttons button:hover {
+    background: none;
+    color: #36e2ec;
+}
+
+header .song-side .content .buttons button:nth-child(2) {
+    background: none;
+    color: #36e2ec;
+}
+
+header .song-side .content .buttons button:nth-child(2):hover {
+    background: #36e2ec;
+    color: #fff;
+}
+
+header .song-side .popular {
+    width: 60vw;
+    height: auto;
+    margin: auto;
+    margin-top: 10px;
+}
+
+header .song-side .popular .h4 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .song-side .popular .h4 .fa-solid {
+    color: #a4a8b4;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: 0.3s linear;
+}
+
+header .song-side .popular .h4 .fa-solid:hover {
+    color: #fff;
 
 }
 
-header .song-side .popular .pop_song::-webkit-scrollbar{
+header .song-side .popular .pop_song {
+    width: 100%;
+    height: 120px;
+    margin-top: 15px;
+    display: flex;
+    overflow: auto;
+    scroll-behavior: smooth;
 
-display: none;
 }
 
-header .song-side .popular .pop_song li{
-min-width: 100px;
-height: auto;
-list-style-type: none;
-display: flex;
-flex-direction: column;
-align-items: center;
-margin-right: 30px;
-transition: 0.3s linear;
-text-align: center;
+header .song-side .popular .pop_song::-webkit-scrollbar {
+
+    display: none;
 }
-header .song-side .popular .pop_song li:hover{
-background: rgb(105, 105, 170, 0.1);
+
+header .song-side .popular .pop_song li {
+    min-width: 100px;
+    height: auto;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 30px;
+    transition: 0.3s linear;
+    text-align: center;
 }
-header .song-side .popular .pop_song li .img_play{
+
+header .song-side .popular .pop_song li:hover {
+    background: rgb(105, 105, 170, 0.1);
+}
+
+header .song-side .popular .pop_song li .img_play {
     position: relative;
     width: 80px;
     height: 80px;
@@ -786,11 +805,13 @@ header .song-side .popular .pop_song li .img_play{
     align-items: center;
     justify-content: center;
 }
-header .song-side .popular .pop_song li .img_play img{
-width: 100%;
-height: 100%;
+
+header .song-side .popular .pop_song li .img_play img {
+    width: 100%;
+    height: 100%;
 }
-header .song-side .popular .pop_song li .img_play .fa-solid{
+
+header .song-side .popular .pop_song li .img_play .fa-solid {
 
     position: absolute;
     font-size: 20px;
@@ -798,11 +819,14 @@ header .song-side .popular .pop_song li .img_play .fa-solid{
     transition: 0.3s linear;
     opacity: 0;
 }
-header .song-side .popular .pop_song li:hover .img_play .fa-solid{
+
+header .song-side .popular .pop_song li:hover .img_play .fa-solid {
     opacity: 1;
 }
-header .song-side .popular .pop_song li h5{
-    padding:5px 0px 0px 5px ;
+
+/* h5 ke andr naam aur subtitle h */
+header .song-side .popular .pop_song li h5 {
+    padding: 5px 0px 0px 5px;
     line-height: 15px;
     font-size: 10px;
     width: 100px;
@@ -810,8 +834,9 @@ header .song-side .popular .pop_song li h5{
     white-space: nowrap;
     text-overflow: ellipsis;
 }
-header .song-side .popular .pop_song li h5 .subtitle{
-    
+
+header .song-side .popular .pop_song li h5 .subtitle {
+
     font-size: 9px;
     overflow: hidden;
     white-space: nowrap;
@@ -821,58 +846,67 @@ header .song-side .popular .pop_song li h5 .subtitle{
 
 header .song-side .popular_artists {
     width: 100%;
-    height:auto ;
+    height: auto;
     margin-top: 10px;
-    
-}
-header .song-side .popular_artists .h4{
-display: flex;
-align-items: center;
-justify-content: space-between;
-}
-header .song-side .popular_artists .h4 .fa-solid{
-color: #a4a8b4;
-cursor: pointer;
-margin-right: 10px;
-transition: 0.3s linear;
-}
-header .song-side .popular_artists .h4 .fa-solid:hover{
-color: #fff;
 
 }
 
-header .song-side .popular_artists .item{
-width: 100%;
-height: auto;
-margin-top: 10px;
-display: flex;
-overflow: auto;
-scroll-behavior: smooth;
+header .song-side .popular_artists .h4 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* isse ham Popuplar artists heading and usme arrows ka color set krnge */
+header .song-side .popular_artists .h4 .fa-solid {
+    color: #a4a8b4;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: 0.3s linear;
+}
+
+header .song-side .popular_artists .h4 .fa-solid:hover {
+    color: #fff;
 
 }
 
-/* yaha se */
-
-header .song-side .popular_artists .item::-webkit-scrollbar{
-
-display: none;
+/* iske andr saare artists show honge, display-flex kyoki ek line m h */
+header .song-side .popular_artists .item {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    display: flex;
+    overflow: auto;
+    scroll-behavior: smooth;
 }
 
-header .song-side .popular_artists .item li{
-min-width: 80px;
-height: auto;
-list-style-type: none;
-display: flex;
-flex-direction: column;
-align-items: center;
-margin-right: 30px;
-transition: 0.3s linear;
+
+/* hiding scroll bar */
+header .song-side .popular_artists .item::-webkit-scrollbar {
+
+    display: none;
+}
+
+/* isse image aur name ek hi box ke andr aayenge and center kr lenge use and flex directn column rkh lenge */
+header .song-side .popular_artists .item li {
+    min-width: 80px;
+    height: auto;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 30px;
+    transition: 0.3s linear;
 
 }
-header .song-side .popular_artists .item li:hover{
-background: rgb(105, 105, 170, 0.1);
+
+header .song-side .popular_artists .item li:hover img {
+    padding: 2px;
+    transition: 0.1s linear;
+    background: rgb(105, 105, 170, 0.1);
 }
-header .song-side .popular_artists .item li .img_play{
+
+header .song-side .popular_artists .item li .img_play {
     position: relative;
     width: 80px;
     height: 80px;
@@ -881,12 +915,16 @@ header .song-side .popular_artists .item li .img_play{
     align-items: center;
     justify-content: center;
 }
-header .song-side .popular_artists .item li .img_play img{
-width: 100%;
-height: 100%;
-border-radius: 50%;
+
+header .song-side .popular_artists .item li .img_play img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
 }
-header .song-side .popular_artists .item li .img_play .fa-solid{
+
+
+/* initially play button ko har artiststs ke image ke upar rkha and then opacity 0 krdi jisse na dikhe vo play button */
+header .song-side .popular_artists .item li .img_play .fa-solid {
 
     position: absolute;
     font-size: 20px;
@@ -894,11 +932,14 @@ header .song-side .popular_artists .item li .img_play .fa-solid{
     transition: 0.3s linear;
     opacity: 0;
 }
-header .song-side .popular_artists .item li:hover .img_play .fa-solid{
+
+/* yaha pr opactity 1 krdi jo li pr hover krne se dikhegi */
+header .song-side .popular_artists .item li:hover .img_play .fa-solid {
     opacity: 1;
 }
-header .song-side .popular_artists .item li h5{
-    padding:5px 0px 0px 5px ;
+
+header .song-side .popular_artists .item li h5 {
+    padding: 5px 0px 0px 5px;
     line-height: 15px;
     font-size: 10px;
     width: 100px;
