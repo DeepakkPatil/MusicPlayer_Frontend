@@ -1,0 +1,1093 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Sansita+Swashed:wght@500&display=swap");
+/* This is done to import a family called Poppins just replace Poppins by any other to import that font */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    height: 100vh;
+    background: #121213;
+
+    /* To center the element METHOD1 */
+
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+
+    /* METHOD2 */
+
+    display: grid;
+    place-items: center;
+}
+
+header {
+    position: relative;
+    height: 95%;
+    width: 85%;
+    /* border: 1px solid #fff; */
+
+    display: flex;
+    /* kyoki apn ko side by side show krna h */
+    /* flex wrap wrap isliye use kra kyoki hme 3rd wla master-play neeche chahiye */
+    flex-wrap: wrap;
+
+}
+
+header .menu-side,
+.song-side {
+
+    width: 25%;
+    height: 90%;
+    /* border: 1px solid white; */
+    background: #111727;
+    box-shadow: 5px 0px 2px #090f1f;
+    color: #fff;
+}
+
+header .song-side {
+    width: 75%;
+    background: #0b1320;
+    overflow: auto;
+    scroll-behavior: smooth;
+}
+
+header .song-side::-webkit-scrollbar {
+    display: none;
+}
+
+header .master-play {
+    width: 100%;
+    height: 10%;
+    background: #111727;
+
+    box-shadow: 0px 3px 8px #090f1f;
+}
+
+header .menu-side {
+    z-index: -10;
+}
+
+header .menu-side h1 {
+    font-size: 20px;
+    margin: 15px 0px 0px 20px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+header .menu-side h1 img {
+    width: 20%;
+    height: 20%;
+    margin-right: 10%;
+    border-radius: 50%;
+}
+
+header .menu-side h1:hover img {
+
+    animation: flip;
+    animation-duration: 0.5s;
+}
+
+
+header .menu-side .playlist {
+
+    margin: 15px 0px 0px 15px;
+    font-size: 14px;
+}
+
+header .menu-side .playlist h4 {
+
+    font-size: 15px;
+    font-weight: 400;
+    padding-bottom: 10px;
+    color: #4c5262;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: 0.3s linear;
+}
+
+header .menu-side .playlist h4:hover {
+
+    color: #fff;
+}
+
+header .menu-side .playlist h4 span {
+
+    position: relative;
+    margin-right: 35px;
+}
+
+header .menu-side .playlist h4 span::before {
+
+    /* this is used to add  circle due to content and border and border radius */
+
+    content: ' ';
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    border: 2px solid #4c5262;
+    border-radius: 50%;
+    top: -4px;
+    display: none;
+    transition: 0.3 linear;
+}
+
+header .menu-side .playlist h4:hover span::before {
+
+    border: 2px solid #fff;
+    border-radius: 50%;
+    top: -4px;
+    transition: 0.3 linear;
+}
+
+header .menu-side .playlist h4 .fa-music {
+
+    /* jo active h vahi sirf dikhega */
+    display: none;
+
+}
+
+header .menu-side .playlist .active {
+
+    color: #36e2ec;
+
+}
+
+header .menu-side .playlist .active span {
+
+    /* isse jo circle jo h vo active wle pr nhi ayega */
+    display: none;
+
+}
+
+header .menu-side .playlist .active .fa-music {
+
+    /* active wle m music icon dikhna chahiye */
+
+    display: flex;
+    margin-right: 20px;
+}
+
+header .menu-side .menu_song {
+    width: 100%;
+    height: 360px;
+    margin-top: 20px;
+
+    /* overflow auto is agar jyda rhta h tph scroll bar aata h */
+    overflow: auto;
+    scroll-behavior: smooth;
+}
+
+
+/* isse scroll bar nhi dikhega */
+header .menu-side .menu_song::-webkit-scrollbar {
+    display: none;
+}
+
+header .menu-side .menu_song li {
+
+    list-style-type: none;
+    /* Removing dots */
+    position: relative;
+    padding: 5px 0px 5px 20px;
+
+    /* To make them in a line */
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: 0.3s linear;
+}
+
+header .menu-side .menu_song li span {
+    font-size: 12px;
+    font-weight: 600;
+    color: #4c5262;
+}
+
+header .menu-side .menu_song li:hover {
+
+    background: rgb(105, 105, 105);
+}
+
+header .menu-side .menu_song li:hover span {
+    color: #fff;
+}
+
+header .menu-side .menu_song li:hover h5 .subtitle {
+    color: #fff;
+}
+
+header .menu-side .menu_song li:hover i {
+    color: orange
+}
+
+header .menu-side .menu_song li .imgplay {
+
+    position: relative;
+    display: flex;
+}
+
+header .menu-side .menu_song li .imgplay img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+header .menu-side .menu_song li h5 {
+
+    font-size: 12px;
+    margin-left: 15px;
+    width: 150px;
+    letter-spacing: 0.5px;
+    font-weight: 300;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* isse naam ke baad ... aajaate h */
+    white-space: nowrap;
+    /* isse white space toh rhti h lekin line-break nhi rhta sb ek line m aata h */
+
+}
+
+header .menu-side .menu_song li h5 .subtitle {
+
+    font-size: 10px;
+    color: #4c5262;
+}
+
+header .menu-side .menu_song li .fa-solid {
+
+    position: absolute;
+    right: 10px;
+
+}
+
+header .menu-side .menu_song li .imgplay .fa-solid {
+
+    position: absolute;
+    align-items: center;
+    align-self: center;
+    display: none;
+}
+
+
+/* isme saare control vagera sb rhega vo sb ek hi line m rhega isliye flex*/
+header .master-play {
+    display: flex;
+    align-items: center;
+    padding: 0px 20px;
+}
+
+/* wave ke liye container iske andr teen divs h */
+header .master-play .wave {
+    width: 30px;
+    height: 30px;
+    padding-bottom: 5px;
+    display: flex;
+    align-items: flex-end;
+    margin-right: 10px;
+}
+
+header .master-play .wave .wave1 {
+    width: 3px;
+    height: 10px;
+    background: #36e2ec;
+    margin-right: 3px;
+    border-radius: 10px 10px 0px 0px;
+    /* animation is unset because we will make it active hen clicked */
+    animation: wave 0.5s linear infinite;
+}
+
+header .master-play .wave .wave1:nth-child(2) {
+    height: 13px;
+    margin-right: 3.5px;
+    animation-delay: 0.4s;
+}
+
+header .master-play .wave .wave1:nth-child(3) {
+    height: 8px;
+    /* animation delay se hi wave animation produce hoga */
+    animation-delay: 0.8s;
+}
+
+/* javascript classes */
+header .master-play .active1 .wave1 {
+    animation: wave 0.5s linear infinite;
+}
+
+header .master-play .active1 .wave1:nth-child(2) {
+
+    animation-delay: 0.4s;
+}
+
+header .master-play .active1 .wave1:nth-child(3) {
+    /* animation delay se hi wave animation produce hoga */
+    animation-delay: 0.8s;
+}
+
+
+/* wave ke liye animation likha h */
+@keyframes wave {
+    0% {
+        height: 10px;
+    }
+
+    50% {
+        height: 15px;
+    }
+
+    100% {
+        height: 10px;
+    }
+}
+
+header .master-play img {
+    width: 35px;
+    height: 35px;
+}
+
+header .master-play h5 {
+    width: 130px;
+    margin-left: 15px;
+    color: #fff;
+    line-height: 17px;
+
+    /* same pehle jesa jisse naam bada hoto problem na aaye */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 13px;
+}
+
+header .master-play h5 .subtitle {
+    width: 100%;
+    color: #4c5262;
+    font-size: 11px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+header .master-play .icon {
+
+    color: #fff;
+    font-size: 17px;
+    margin: 0px 20px 0px 20px;
+    outline: none;
+    display: flex;
+    align-items: center;
+}
+
+header .master-play .icon .fa-solid {
+    margin-right: 2.5px;
+    margin-left: 2.5px;
+    cursor: pointer;
+
+    /* An outline is a line drawn outside the element's border. */
+    outline: none;
+}
+
+header .master-play .icon .shuffle {
+    font-size: 17px;
+    margin-right: 10px;
+    width: 16.5px;
+
+    /* isse jo next text likha h vo hidden ho jayega */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+
+header .master-play .icon .fa-solid:nth-child(3) {
+    /* isse hmne play button jo h center m use target kra h */
+    border: 1px solid rgb(105, 105, 105, 0.4);
+    border-radius: 50%;
+    padding: 2px 5px 2px 7px;
+    margin: 0px 8px;
+}
+
+header .master-play span {
+    color: #fff;
+    width: 40px;
+    font-size: 12px;
+
+}
+
+header .master-play .iconNbar {
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+header .master-play .iconNbar .barcontainer {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
+header .master-play .iconNbar .barcontainer .bar {
+    /* music ka full progress bar */
+    position: relative;
+    height: 2px;
+
+    width: 80%;
+    background: rgb(105, 105, 170, 0.1);
+    margin: 0px 15px 0px 10px;
+
+}
+
+/* bar2 se prorgess dikhegi blue shade wli */
+header .master-play .bar .bar2 {
+
+    position: absolute;
+    background: #36e2ec;
+    width: 40%;
+    height: 100%;
+    top: 0;
+    transition: 1s linear;
+}
+
+/* absolute isliye kyoki vo line ke upar hona chahiye ye */
+header .master-play .bar .dot {
+
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: #36e2ec;
+    border-radius: 50%;
+    left: 40%;
+    top: -1.5px;
+    transition: 1s linear;
+}
+
+/* bahar ka circle jisne dot ko cover krke rkha h vo isse aaya h */
+header .master-play .bar .dot::before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #36e2ec;
+    border-radius: 50%;
+    left: -6.5px;
+    top: -6.5px;
+    /* inset isliye kyoki andr ki taraf shadow chahiye */
+    box-shadow: inset 0px 0px 3px #36e2ec;
+}
+
+header .master-play .bar input {
+    position: absolute;
+    width: 100%;
+    top: -6px;
+    left: 0px;
+    cursor: pointer;
+    z-index: 99999;
+
+    /* isse progress bar dikhega nhi input wla */
+    opacity: 0;
+}
+
+/* this is for like the song */
+header .master-play .fa-regular {
+    color: #fff;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: 0.3s linear;
+}
+
+header .master-play .vol {
+    position: relative;
+    width: 100px;
+    height: 2px;
+    background: rgb(105, 105, 170, 0.1);
+    margin-left: 50px;
+}
+
+header .master-play .vol .fa-solid {
+    position: absolute;
+    color: #fff;
+    font-size: 20px;
+    top: -10px;
+    left: -30px;
+}
+
+header .master-play .vol .volbar input {
+    position: absolute;
+    width: 100%;
+    top: -6px;
+    left: 0;
+    cursor: pointer;
+    z-index: 99999;
+    opacity: 0;
+}
+
+header .master-play .vol .volbar .vol_bar {
+
+    position: absolute;
+    background: #36e2ec;
+    height: 100%;
+    width: 50%;
+    top: 0;
+    transition: 1s linear;
+}
+
+header .master-play .vol .volbar .dot {
+
+    /* just like the music progress full same */
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: #36e2ec;
+    border-radius: 50%;
+    left: 0%;
+    top: -1.5px;
+    transition: 1s linear;
+}
+
+header .song-side {
+    z-index: -2;
+}
+
+
+/* using this we set the image as background */
+header .song-side::before {
+
+    content: '';
+    position: absolute;
+    width: 30%;
+    right: 10%;
+    top: 10%;
+    opacity: 0.9;
+    height: 33%;
+    background: url(bg.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -1;
+
+}
+
+/* this consists of diff navigation sectn and search jo ek line m rehe */
+header .song-side nav {
+
+    width: 90%;
+    min-height: 10%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* isse nav ul flex hojayega toh sb ek line m rhnge */
+header .song-side nav ul {
+
+    display: flex;
+}
+
+header .song-side nav ul li {
+    list-style: none;
+    position: relative;
+    line-height: 20px;
+    font-size: 13px;
+    color: #4c5262;
+    margin-right: 25px;
+    cursor: pointer;
+    transition: 0.3s linear;
+    text-transform: uppercase;
+}
+
+header .song-side nav ul li:hover {
+
+    color: #fff;
+}
+
+/* active krliya Discover section ko */
+header .song-side nav ul li:nth-child(1) {
+    color: #fff;
+}
+
+/* Jo current active h usme underline bhi dikhega  jese discover */
+header .song-side nav ul li span {
+
+    position: absolute;
+    width: 100%;
+    height: 2.5px;
+    background: #36e2ec;
+    bottom: -5px;
+    left: 0;
+    border-radius: 20px;
+}
+
+
+/* so that header appears on topmost layer  */
+header {
+    z-index: 999999999999999999;
+}
+
+
+/* SEARCH SECTION */
+
+
+header .song-side nav .search {
+
+    position: relative;
+    width: 35%;
+    min-height: 10%;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    border: 2px solid #fff;
+    color: gray;
+}
+
+/* isse hmne search wle ka background blur krdiya  */
+
+header .song-side nav .search::before {
+
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgb(184, 184, 184, 0.1);
+    border-radius: 20px;
+
+    /* backdrop-filter is apn background ko blur kr skte h */
+    backdrop-filter: blur(5px);
+    z-index: -1;
+}
+
+header .song-side nav a {
+
+    display: none;
+}
+
+header .song-side nav ul li .fa {
+
+    color: #fff;
+    font-size: 1.5rem;
+    display: none;
+}
+
+
+/* bell ke liye set kr rhe size*/
+header .song-side nav .fa-solid {
+
+    font-size: 0.7rem;
+    padding: 3px 0px 0px 3px;
+}
+
+/* set relative because the badge should appear over this bell to this  */
+header .song-side nav .bell {
+    position: relative;
+}
+
+header .song-side nav .bell:hover .fa-solid {
+
+    animation: swing;
+    animation-duration: 0.5s;
+}
+
+header .song-side nav .bell .fa-solid {
+
+    font-size: 20px;
+}
+
+
+/* for badge over bell icon postion should be absoulte with respect to bell */
+header .song-side nav .bell .badge {
+
+    background-color: red;
+    width: 7px;
+    height: 7px;
+    position: absolute;
+    right: 0%;
+    border-radius: 50%;
+}
+
+
+
+header .song-side nav .search input {
+    background: none;
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+    color: #fff;
+    font-size: 12px;
+    z-index: 1;
+}
+
+/* user image in circle */
+header .song-side nav .user {
+
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+header .song-side nav .user img {
+
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    opacity: 0.9;
+    box-shadow: inset 2px 2px 8px #121213;
+}
+
+
+header .song-side .content {
+
+    width: 90%;
+    min-height: 30%;
+    margin: auto;
+    padding-top: 30px;
+}
+
+header .song-side .content h1 {
+    font-size: 25px;
+    font-weight: 600;
+
+}
+
+header .song-side .content p {
+    font-size: 11px;
+    min-height: 40px;
+    font-weight: 400;
+    overflow: auto;
+    color: #4c5262;
+    margin: 5px;
+}
+
+header .song-side .content .buttons {
+    margin-top: 25px;
+}
+
+header .song-side .content .buttons button {
+    height: 30px;
+    width: 130px;
+    border: 2px solid #36e2ec;
+    outline: none;
+    border-radius: 20px;
+    background: #51dae0;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s linear;
+}
+
+header .song-side .content .buttons button:hover {
+    background: none;
+    color: #36e2ec;
+}
+
+header .song-side .content .buttons button:nth-child(2) {
+    background: none;
+    color: #36e2ec;
+}
+
+header .song-side .content .buttons button:nth-child(2):hover {
+    background: #36e2ec;
+    color: #fff;
+}
+
+header .song-side .popular {
+    position: relative;
+    width: 60vw;
+    height: auto;
+    margin: auto;
+    margin-top: 10px;
+}
+
+header .song-side .popular .h4 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .song-side .popular .h4 .fa-solid {
+    color: #a4a8b4;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: 0.3s linear;
+}
+
+header .song-side .popular .h4 .fa-solid:hover {
+    color: #fff;
+
+}
+
+header .song-side .popular .pop_song {
+    width: 100%;
+    height: 120px;
+    margin-top: 15px;
+    display: flex;
+    overflow: auto;
+    scroll-behavior: smooth;
+
+}
+
+header .song-side .popular .pop_song::-webkit-scrollbar {
+
+    display: none;
+}
+
+header .song-side .popular .pop_song li {
+    min-width: 100px;
+    height: auto;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 30px;
+    transition: 0.3s linear;
+    text-align: center;
+}
+
+header .song-side .popular .pop_song li:hover {
+    background: rgb(105, 105, 170, 0.1);
+}
+
+header .song-side .popular .pop_song li .img_play {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .song-side .popular .pop_song li .img_play img {
+    width: 100%;
+    height: 100%;
+}
+
+header .song-side .popular .pop_song li .img_play .fa-solid {
+
+    position: absolute;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s linear;
+    opacity: 0;
+}
+
+header .song-side .popular .pop_song li:hover .img_play .fa-solid {
+    opacity: 1;
+}
+
+/* h5 ke andr naam aur subtitle h */
+header .song-side .popular .pop_song li h5 {
+    padding: 5px 0px 0px 5px;
+    line-height: 15px;
+    font-size: 10px;
+    width: 100px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+header .song-side .popular .pop_song li h5 .subtitle {
+
+    font-size: 9px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #4c5262;
+}
+
+header .song-side .popular_artists {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+
+}
+
+header .song-side .popular_artists .h4 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* isse ham Popuplar artists heading and usme arrows ka color set krnge */
+header .song-side .popular_artists .h4 .fa-solid {
+    color: #a4a8b4;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: 0.3s linear;
+}
+
+header .song-side .popular_artists .h4 .fa-solid:hover {
+    color: #fff;
+
+}
+
+/* iske andr saare artists show honge, display-flex kyoki ek line m h */
+header .song-side .popular_artists .item {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    display: flex;
+    overflow: auto;
+    scroll-behavior: smooth;
+}
+
+
+/* hiding scroll bar */
+header .song-side .popular_artists .item::-webkit-scrollbar {
+
+    display: none;
+}
+
+/* isse image aur name ek hi box ke andr aayenge and center kr lenge use and flex directn column rkh lenge */
+header .song-side .popular_artists .item li {
+    min-width: 80px;
+    height: auto;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 30px;
+    transition: 0.3s linear;
+
+}
+
+header .song-side .popular_artists .item li:hover img {
+    padding: 2px;
+    transition: 0.1s linear;
+    background: rgb(105, 105, 170, 0.1);
+}
+
+header .song-side .popular_artists .item li .img_play {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+header .song-side .popular_artists .item li .img_play img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+
+/* initially play button ko har artiststs ke image ke upar rkha and then opacity 0 krdi jisse na dikhe vo play button */
+header .song-side .popular_artists .item li .img_play .fa-solid {
+
+    position: absolute;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s linear;
+    opacity: 0;
+}
+
+/* yaha pr opactity 1 krdi jo li pr hover krne se dikhegi */
+header .song-side .popular_artists .item li:hover .img_play .fa-solid {
+    opacity: 1;
+}
+
+header .song-side .popular_artists .item li h5 {
+    padding: 5px 0px 0px 5px;
+    line-height: 15px;
+    font-size: 10px;
+    width: 100px;
+    overflow: hidden;
+    text-align: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+
+
+
+/* media Queries */
+@media screen and (max-width: 600px) {
+    header .menu-side .menu_song li .fa-solid {
+        display: none;
+    }
+
+    header .song-side nav ul li.icon {
+        display: none;
+    }
+
+    header .song-side nav ul li span {
+        display: none;
+    }
+
+    header .menu-side .menu_song li .imgplay .fa-solid {
+        display: flex;
+    }
+
+    header .master-play .vol {
+        display: none;
+    }
+
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 800px) {
+    .topnav.responsive {
+        position: relative;
+    }
+
+    .topnav.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    header .song-side nav ul li.icon {
+        display: none;
+    }
+
+    header .song-side nav ul li span {
+        display: none;
+    }
+
+    header .menu-side .menu_song li .fa-solid {
+        display: none;
+    }
+
+    header .song-side nav ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    header .song-side nav ul li span {
+        display: none;
+    }
+
+    header .song-side nav ul li.icon {
+        display: none;
+    }
+
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+    header .menu-side .menu_song li .imgplay .fa-solid {
+        display: flex;
+    }
+}

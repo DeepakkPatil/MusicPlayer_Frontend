@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/6b317e65fe.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="style.css">
+
+    <title>Music App</title>
+</head>
+
+<body>
+    <header>
+
+
+        <div class="menu-side">
+
+            <h1>
+                <img src="Logo.png" class="logo">
+                Playlist
+            </h1>
+            <div class="playlist">
+                <h4><span></span><i class="fa-sharp fa-solid fa-music"></i>Home</h4>
+                <h4 class="active"><span></span><i class="fa-sharp fa-solid fa-music"></i>Playlist</h4>
+                <h4><span></span><i class="fa-sharp fa-solid fa-music"></i>Recents</h4>
+            </div>
+            <div class="menu_song">
+
+                <li class="songItem">
+                    <span>01</span>
+                    <div class="imgplay">
+                        <img src="songs/1.jpg" alt="">
+                        <i class="playListPlay fa-solid fa-circle-play" id="1"></i>
+                    </div>
+                    <h5>Kesariya <br>
+                        <div class="subtitle">Arijit Singh</div>
+                    </h5>
+                    <i class="playListPlay fa-solid fa-circle-play" id="1"></i>
+
+                </li>
+
+                <li class="songItem">
+                    <span>02</span>
+                    <div class="imgplay">
+                        <img src="songs/2.jpg" alt="">
+                        <i class="playListPlay fa-solid fa-circle-play" id="1"></i>
+                    </div>
+                    <h5>Hamari Adhuri Kahani<br>
+                        <div class="subtitle">Arijit Singh</div>
+                    </h5>
+                    <i class="playListPlay fa-solid fa-circle-play" id="1"></i>
+                </li>
+
+                <li class="songItem">
+                    <span>03</span>
+                    <div class="imgplay">
+                        <img src="songs/3.jpg" alt="">
+                        <i class="playListPlay fa-solid fa-circle-play" id="1"></i>
+                    </div>
+                    <h5>Tum Hi Ho<br>
+                        <div class="subtitle">Arijit Singh</div>
+                    </h5>
+                    <i class="playListPlay fa-solid fa-circle-play" id="1"></i>
+                </li>
+
+                <li class="songItem">
+                    <span>04</span>
+                    <div class="imgplay">
+                        <img src="songs/4.jpg" alt="">
+                        <i class="playListPlay fa-solid fa-circle-play" id="1"></i>
+                    </div>
+                    <h5>Khairiyat<br>
+                        <div class="subtitle">Arijit Singh</div>
+                    </h5>
+                    <i class="playListPlay fa-solid fa-circle-play" id="1"></i>
+                </li>
+
+                <li class="songItem">
+                    <span>05</span>
+                    <div class="imgplay">
+                        <img src="songs/5.jpg" alt="">
+                        <i class="playListPlay fa-solid fa-circle-play" id="1"></i>
+                    </div>
+                    <h5>Raabta <br>
+                        <div class="subtitle">Arijit Singh</div>
+                    </h5>
+                    <i class="playListPlay fa-solid fa-circle-play" id="1"></i>
+                </li>
+
+                <li class="songItem">
+                    <span>06</span>
+                    <div class="imgplay">
+                        <img src="songs/6.jpg" alt="">
+                        <i class="playListPlay fa-solid fa-circle-play" id="1"></i>
+                    </div>
+                    <h5>Tera Fitoor<br>
+                        <div class="subtitle">Arijit Singh</div>
+                    </h5>
+                    <i class="playListPlay fa-solid fa-circle-play" id="1"></i>
+                </li>
+
+                <li class="songItem">
+                    <span>07</span>
+                    <div class="imgplay">
+                        <img src="songs/7.jpg" alt="">
+                        <i class="playListPlay fa-solid fa-circle-play" id="1"></i>
+                    </div>
+                    <h5>Gerua<br>
+                        <div class="subtitle">Arijit Singh</div>
+                    </h5>
+                    <i class="playListPlay fa-solid fa-circle-play" id="1"></i>
+                </li>
+
+                <li class="songItem">
+                    <span>08</span>
+                    <div class="imgplay">
+                        <img src="songs/8.jpg" alt="">
+                        <i class="playListPlay fa-solid fa-circle-play" id="1"></i>
+                    </div>
+                    <h5>Zaalima<br>
+                        <div class="subtitle">Arijit Singh</div>
+                    </h5>
+                    <i class="playListPlay fa-solid fa-circle-play" id="1"></i>
+                </li>
+
+            </div>
+
+        </div>
+        <div class="song-side">
+            <nav>
+                <ul class="topnav" id="myTopnav">
+                    <li href="#" class="active">Discover <span></span></li>
+                    <li href="#">Library</li>
+                    <li href="#">Favourites</li>
+                    <li href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <i class="fa fa-bars"></i>
+                    </li>
+                </ul>
+                <div class="search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search Music..">
+                </div>
+                <div class="bell animate__animated animate__swing animate__repeat-2 animate__delay-3s ">
+                    <div class="badge  "></div>
+                    <i class="fa-solid fa-bell"></i>
+                </div>
+                <div class="user">
+                    <img src="DSC_0866.JPG">
+                </div>
+
+            </nav>
+            <div class="content">
+                <h1>Arijit Singh</h1>
+
+                <p>Mujhko itna bataaye koi.....
+                    Kaise tujhse dil na lagaaye koi....
+                    Rabba ne tujhko banaane mein,
+                    Kar di hai husan ki khaali tijoriya ....Kajal ki siyaahi se likhi
+                    Hai tune jaane kitno ki love storiyan..
+                </p>
+                <div class="buttons">
+                    <button>Play</button>
+                    <button>Follow</button>
+                </div>
+            </div>
+            <div class="popular">
+                <div class="h4">
+                    <h4>Popular Songs</h4>
+                    <div class="btn_s">
+                        <i class="fa-solid fa-arrow-left-long"></i>
+                        <i class="fa-solid fa-arrow-right-long"></i>
+                    </div>
+
+                </div>
+                <div class="pop_song">
+
+                    <li class="songItem">
+                        <div class="img_play">
+                            <img src="songs/1.jpg" alt="">
+                            <i class="playListPlay fa-solid fa-circle-play" id="1"></i>
+                        </div>
+                        <h5>Kesariya <br>
+                            <div class="subtitle">Arijit Singh</div>
+                        </h5>
+                    </li>
+                    <li class="songItem">
+                        <div class="img_play">
+                            <img src="songs/2.jpg" alt="">
+                            <i class="playListPlay fa-solid fa-circle-play" id="1"></i>
+                        </div>
+                        <h5>Hamari Adhuri Kahani<br>
+                            <div class="subtitle">Arijit Singh</div>
+                        </h5>
+                    </li>
+                    <li class="songItem">
+                        <div class="img_play">
+                            <img src="songs/3.jpg" alt="">
+                            <i class="playListPlay fa-solid fa-circle-play" id="1"></i>
+                        </div>
+                        <h5>Tum Hi Ho<br>
+                            <div class="subtitle">Arijit Singh</div>
+                        </h5>
+                    </li>
+                    <li class="songItem">
+                        <div class="img_play">
+                            <img src="songs/4.jpg" alt="">
+                            <i class="playListPlay fa-solid fa-circle-play" id="1"></i>
+                        </div>
+                        <h5>Khairiyat<br>
+                            <div class="subtitle">Arijit Singh</div>
+                        </h5>
+                    </li>
+                    <li class="songItem">
+                        <div class="img_play">
+                            <img src="songs/5.jpg" alt="">
+                            <i class="playListPlay fa-solid fa-circle-play" id="1"></i>
+                        </div>
+                        <h5>Raabta <br>
+                            <div class="subtitle">Arijit Singh</div>
+                        </h5>
+                    </li>
+                    <li class="songItem">
+                        <div class="img_play">
+                            <img src="songs/7.jpg" alt="">
+                            <i class="playListPlay fa-solid fa-circle-play" id="1"></i>
+                        </div>
+                        <h5>Gerua<br>
+                            <div class="subtitle">Arijit Singh</div>
+                        </h5>
+                    </li>
+                    <li class="songItem">
+                        <div class="img_play">
+                            <img src="songs/6.jpg" alt="">
+                            <i class="playListPlay fa-solid fa-circle-play" id="1"></i>
+                        </div>
+                        <h5>Tera Fitoor<br>
+                            <div class="subtitle">Arijit Singh</div>
+                        </h5>
+                    </li>
+                    <li class="songItem">
+                        <div class="img_play">
+                            <img src="songs/8.jpg" alt="">
+                            <i class="playListPlay fa-solid fa-circle-play" id="1"></i>
+                        </div>
+                        <h5>Zaalima<br>
+                            <div class="subtitle">Arijit Singh</div>
+                        </h5>
+                    </li>
+
+                    <li class="songItem">
+                        <div class="img_play">
+                            <img src="songs/1.jpg" alt="">
+                            <i class="playListPlay fa-solid fa-circle-play" id="1"></i>
+                        </div>
+                        <h5>Kesariya <br>
+                            <div class="subtitle">Arijit Singh</div>
+                        </h5>
+                    </li>
+                    <li class="songItem">
+                        <div class="img_play">
+                            <img src="songs/2.jpg" alt="">
+                            <i class="playListPlay fa-solid fa-circle-play" id="1"></i>
+                        </div>
+                        <h5>Hamari Adhuri Kahani<br>
+                            <div class="subtitle">Arijit Singh</div>
+                        </h5>
+                    </li>
+                    <li class="songItem">
+                        <div class="img_play">
+                            <img src="songs/3.jpg" alt="">
+                            <i class="playListPlay fa-solid fa-circle-play" id="1"></i>
+                        </div>
+                        <h5>Tum Hi Ho<br>
+                            <div class="subtitle">Arijit Singh</div>
+                        </h5>
+                    </li>
+                    <li class="songItem">
+                        <div class="img_play">
+                            <img src="songs/4.jpg" alt="">
+                            <i class="playListPlay fa-solid fa-circle-play" id="1"></i>
+                        </div>
+                        <h5>Khairiyat<br>
+                            <div class="subtitle">Arijit Singh</div>
+                        </h5>
+                    </li>
+                    <li class="songItem">
+                        <div class="img_play">
+                            <img src="songs/5.jpg" alt="">
+                            <i class="playListPlay fa-solid fa-circle-play" id="1"></i>
+                        </div>
+                        <h5>Raabta <br>
+                            <div class="subtitle">Arijit Singh</div>
+                        </h5>
+                    </li>
+                    <li class="songItem">
+                        <div class="img_play">
+                            <img src="songs/7.jpg" alt="">
+                            <i class="playListPlay fa-solid fa-circle-play" id="1"></i>
+                        </div>
+                        <h5>Gerua<br>
+                            <div class="subtitle">Arijit Singh</div>
+                        </h5>
+                    </li>
+                    <li class="songItem">
+                        <div class="img_play">
+                            <img src="songs/6.jpg" alt="">
+                            <i class="playListPlay fa-solid fa-circle-play" id="1"></i>
+                        </div>
+                        <h5>Tera Fitoor<br>
+                            <div class="subtitle">Arijit Singh</div>
+                        </h5>
+                    </li>
+                    <li class="songItem">
+                        <div class="img_play">
+                            <img src="songs/8.jpg" alt="">
+                            <i class="playListPlay fa-solid fa-circle-play" id="1"></i>
+                        </div>
+                        <h5>Zaalima<br>
+                            <div class="subtitle">Arijit Singh</div>
+                        </h5>
+                    </li>
+                    <li class="songItem">
+                        <div class="img_play">
+                            <img src="songs/4.jpg" alt="">
+                            <i class="playListPlay fa-solid fa-circle-play" id="1"></i>
+                        </div>
+                        <h5>Khairiyat<br>
+                            <div class="subtitle">Arijit Singh</div>
+                        </h5>
+                    </li>
+                    <li class="songItem">
+                        <div class="img_play">
+                            <img src="songs/5.jpg" alt="">
+                            <i class="playListPlay fa-solid fa-circle-play" id="1"></i>
+                        </div>
+                        <h5>Raabta <br>
+                            <div class="subtitle">Arijit Singh</div>
+                        </h5>
+                    </li>
+                    <li class="songItem">
+                        <div class="img_play">
+                            <img src="songs/7.jpg" alt="">
+                            <i class="playListPlay fa-solid fa-circle-play" id="1"></i>
+                        </div>
+                        <h5>Gerua<br>
+                            <div class="subtitle">Arijit Singh</div>
+                        </h5>
+                    </li>
+                    <li class="songItem">
+                        <div class="img_play">
+                            <img src="songs/6.jpg" alt="">
+                            <i class="playListPlay fa-solid fa-circle-play" id="1"></i>
+                        </div>
+                        <h5>Tera Fitoor<br>
+                            <div class="subtitle">Arijit Singh</div>
+                        </h5>
+                    </li>
+                    <li class="songItem">
+                        <div class="img_play">
+                            <img src="songs/8.jpg" alt="">
+                            <i class="playListPlay fa-solid fa-circle-play" id="1"></i>
+                        </div>
+                        <h5>Zaalima<br>
+                            <div class="subtitle">Arijit Singh</div>
+                        </h5>
+                    </li>
+
+                </div>
+                <div class="popular_artists">
+                    <div class="h4">
+                        <h4>Popular Artists</h4>
+                        <div class="btn_s">
+                            <i class="fa-solid fa-arrow-left-long"></i>
+                            <i class="fa-solid fa-arrow-right-long"></i>
+                        </div>
+
+                    </div>
+
+                    <div class="item">
+                        <li class="songItem">
+                            <div class="img_play">
+                                <img src="artists/1.jpg" alt="">
+                                <i class="playListPlay fa-solid fa-circle-play" id="1"></i>
+                            </div>
+                            <h5>Shreya Ghoshal <br>
+
+                            </h5>
+                        </li>
+
+                        <li class="songItem">
+                            <div class="img_play">
+                                <img src="artists/2.jpg" alt="">
+                                <i class="playListPlay fa-solid fa-circle-play" id="1"></i>
+                            </div>
+                            <h5>Atif Aslam<br>
+
+                            </h5>
+                        </li>
+                        <li class="songItem">
+                            <div class="img_play">
+                                <img src="artists/3.jpg" alt="">
+                                <i class="playListPlay fa-solid fa-circle-play" id="1"></i>
+                            </div>
+                            <h5>KK<br>
+
+                            </h5>
+                        </li>
+                        <li class="songItem">
+                            <div class="img_play">
+                                <img src="artists/4.jpg" alt="">
+                                <i class="playListPlay fa-solid fa-circle-play" id="1"></i>
+                            </div>
+                            <h5>Sonu Nigam <br>
+
+                            </h5>
+                        </li>
+                        <li class="songItem">
+                            <div class="img_play">
+                                <img src="artists/5.jpg" alt="">
+                                <i class="playListPlay fa-solid fa-circle-play" id="1"></i>
+                            </div>
+                            <h5>Guru Randhawa<br>
+
+                            </h5>
+                        </li>
+                        <li class="songItem">
+                            <div class="img_play">
+                                <img src="artists/6.jpg" alt="">
+                                <i class="playListPlay fa-solid fa-circle-play" id="1"></i>
+                            </div>
+                            <h5>Neeti Mohan<br>
+
+                            </h5>
+                        </li>
+                        <li class="songItem">
+                            <div class="img_play">
+                                <img src="artists/1.jpg" alt="">
+                                <i class="playListPlay fa-solid fa-circle-play" id="1"></i>
+                            </div>
+                            <h5>Shreya Ghoshal <br>
+
+                            </h5>
+                        </li>
+
+                        <li class="songItem">
+                            <div class="img_play">
+                                <img src="artists/2.jpg" alt="">
+                                <i class="playListPlay fa-solid fa-circle-play" id="1"></i>
+                            </div>
+                            <h5>Atif Aslam<br>
+
+                            </h5>
+                        </li>
+                        <li class="songItem">
+                            <div class="img_play">
+                                <img src="artists/3.jpg" alt="">
+                                <i class="playListPlay fa-solid fa-circle-play" id="1"></i>
+                            </div>
+                            <h5>KK<br>
+
+                            </h5>
+                        </li>
+                        <li class="songItem">
+                            <div class="img_play">
+                                <img src="artists/4.jpg" alt="">
+                                <i class="playListPlay fa-solid fa-circle-play" id="1"></i>
+                            </div>
+                            <h5>Sonu Nigam <br>
+
+                            </h5>
+                        </li>
+                        <li class="songItem">
+                            <div class="img_play">
+                                <img src="artists/5.jpg" alt="">
+                                <i class="playListPlay fa-solid fa-circle-play" id="1"></i>
+                            </div>
+                            <h5>Guru Randhawa<br>
+
+                            </h5>
+                        </li>
+                        <li class="songItem">
+                            <div class="img_play">
+                                <img src="artists/6.jpg" alt="">
+                                <i class="playListPlay fa-solid fa-circle-play" id="1"></i>
+                            </div>
+                            <h5>Neeti Mohan<br>
+
+                            </h5>
+                        </li>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+        <div class="master-play">
+            <div class="wave">
+
+                <div class="wave1"></div>
+                <div class="wave1"></div>
+                <div class="wave1"></div>
+            </div>
+            <img src="songs/faded.jpg" id="poster_master_play">
+            <h5 id="title">
+                Faded
+                <div class="subtitle">Alan Walker</div>
+            </h5>
+            <i class="fa-regular fa-heart"></i>
+            <div class="iconNbar">
+                <div class="icon">
+                    <i class="shuffle fa-sharp fa-solid fa-shuffle"></i>
+                    <i class="fa-solid fa-backward-step"></i>
+                    <i class="fa-solid fa-play"></i>
+                    <i class="fa-solid fa-forward-step"></i>
+                </div>
+
+                <div class="barcontainer">
+                    <span id="currentStart">0:00</span>
+
+                    <div class="bar">
+                        <input type="range" id="seek" min="0" max="100">
+                        <div class="bar2" id="bar2"></div>
+                        <div class="dot"></div>
+                    </div>
+                    <span id="currentEnd">4:30</span>
+                </div>
+            </div>
+
+            <div class="vol">
+
+                <i class="fa-solid fa-volume-low " id="vol_icon"></i>
+                <div class="volbar">
+                    <input type="range" min="0" max="100" id="vol">
+                    <div class="vol_bar"></div>
+                    <div class="dot" id="vol_dot"></div>
+                </div>
+
+            </div>
+        </div>
+
+    </header>
+
+
+
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+</body>
+
+</html>
