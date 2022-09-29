@@ -12,7 +12,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="playstyle.css" />
 
     <title>Music App</title>
   </head>
@@ -22,16 +22,16 @@
       <div class="menu-side">
         <h1>
           <img src="Logo.png" class="logo" />
-          Home
+          Playlist
         </h1>
         <div class="playlist">
-          <a href=""
-            ><h4 class="active">
+          <a href="index.html"
+            ><h4>
               <span></span><i class="fa-sharp fa-solid fa-music"></i>Home
             </h4></a
           >
-          <a href="playlist.html"
-            ><h4>
+          <a href=""
+            ><h4 class="active">
               <span></span><i class="fa-sharp fa-solid fa-music"></i>Playlist
             </h4></a
           >
@@ -41,7 +41,6 @@
             </h4></a
           >
         </div>
-        <h4>Liked Songs</h4>
         <div class="menu_song">
           <li class="songItem">
             <span>01</span>
@@ -149,83 +148,57 @@
         </div>
       </div>
       <div class="song-side">
-        <div class="wrapper">
-          <nav>
-            <div class="container">
-              <ul class="topnav" id="myTopnav">
-                <li href="#" class="active">Discover <span></span></li>
-                <li href="#">Library</li>
-                <li href="#">Favourites</li>
+        <nav>
+          <div class="container">
+            <ul class="topnav" id="myTopnav">
+              <li href="#" class="active">Discover <span></span></li>
+              <li href="#">Library</li>
+              <li href="#">Favourites</li>
+            </ul>
+            <div class="down-list">
+              <i class="fa fa-bars"></i>
+              <ul>
+                <li>
+                  <a href="#"> Discover </a>
+                </li>
+                <li>
+                  <a href="#"> Library </a>
+                </li>
+                <li>
+                  <a href="#"> Favourites </a>
+                </li>
               </ul>
-              <div class="down-list">
-                <i class="fa fa-bars"></i>
-                <ul>
-                  <li>
-                    <a href="#"> Discover </a>
-                  </li>
-                  <li>
-                    <a href="#"> Library </a>
-                  </li>
-                  <li>
-                    <a href="#"> Favourites </a>
-                  </li>
-                </ul>
-              </div>
             </div>
-            <div class="search">
-              <i class="fa-solid fa-magnifying-glass"></i>
-              <input type="text" placeholder="Search Music.." />
-            </div>
-            <div
-              class="bell animate__animated animate__swing animate__repeat-2 animate__delay-3s"
-            >
-              <div class="badge"></div>
-              <i class="fa-solid fa-bell"></i>
-            </div>
-            <div class="user">
-              <img src="DSC_0866.JPG" />
-            </div>
-          </nav>
-        </div>
+          </div>
+          <div class="search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Search Music.." />
+          </div>
+          <div
+            class="bell animate__animated animate__swing animate__repeat-2 animate__delay-3s"
+          >
+            <div class="badge"></div>
+            <i class="fa-solid fa-bell"></i>
+          </div>
+          <div class="user">
+            <img src="DSC_0866.JPG" />
+          </div>
+        </nav>
 
-        <div class="crousalnbody">
-          <div class="slider">
-            <div class="slides">
-              <!--radio buttons start-->
-              <input type="radio" name="radio-btn" id="radio1" />
-              <input type="radio" name="radio-btn" id="radio2" />
-              <input type="radio" name="radio-btn" id="radio3" />
-              <input type="radio" name="radio-btn" id="radio4" />
-              <!--radio buttons end-->
-              <!--slide images start-->
-              <div class="slide first">
-                <img src="c1.png" alt="" />
-              </div>
-              <div class="slide">
-                <img src="3.jpg" alt="" />
-              </div>
-              <div class="slide">
-                <img src="2.jpg" alt="" />
-              </div>
-              <div class="slide">
-                <img src="c1.png" alt="" />
-              </div>
-              <!--slide images end-->
-              <!--automatic navigation start-->
+        <div class="content">
+          <h1>Arijit Singh</h1>
 
-              <!--automatic navigation end-->
-            </div>
-            <!--manual navigation start-->
-            <div class="navigation-manual">
-              <label for="radio1" class="manual-btn"></label>
-              <label for="radio2" class="manual-btn"></label>
-              <label for="radio3" class="manual-btn"></label>
-              <label for="radio4" class="manual-btn"></label>
-            </div>
-            <!--manual navigation end-->
+          <p>
+            Mujhko itna bataaye koi..... Kaise tujhse dil na lagaaye koi....
+            Rabba ne tujhko banaane mein, Kar di hai husan ki khaali tijoriya
+            ....Kajal ki siyaahi se likhi Hai tune jaane kitno ki love
+            storiyan..
+          </p>
+          <div class="buttons">
+            <button>Play</button>
+            <button>Follow</button>
           </div>
         </div>
-
         <div class="popular">
           <div class="h4">
             <h4>Popular Songs</h4>
@@ -448,7 +421,6 @@
               </h5>
             </li>
           </div>
-
           <div class="popular_artists">
             <div class="h4">
               <h4>Popular Artists</h4>
@@ -550,114 +522,6 @@
         </div>
       </div>
 
-      <div class="menu-side side-menu2">
-        <h4><br />Queue</h4>
-        <div class="menu_song menu_queue">
-          <li class="songItem">
-            <span>01</span>
-            <div class="imgplay">
-              <img src="songs/1.jpg" alt="" />
-              <i class="playListPlay fa-solid fa-circle-play" id="1"></i>
-            </div>
-            <h5>
-              Kesariya <br />
-              <div class="subtitle">Arijit Singh</div>
-            </h5>
-            <i class="playListPlay fa-solid fa-circle-play" id="1"></i>
-          </li>
-
-          <li class="songItem">
-            <span>02</span>
-            <div class="imgplay">
-              <img src="songs/2.jpg" alt="" />
-              <i class="playListPlay fa-solid fa-circle-play" id="1"></i>
-            </div>
-            <h5>
-              Hamari Adhuri Kahani<br />
-              <div class="subtitle">Arijit Singh</div>
-            </h5>
-            <i class="playListPlay fa-solid fa-circle-play" id="1"></i>
-          </li>
-
-          <li class="songItem">
-            <span>03</span>
-            <div class="imgplay">
-              <img src="songs/3.jpg" alt="" />
-              <i class="playListPlay fa-solid fa-circle-play" id="1"></i>
-            </div>
-            <h5>
-              Tum Hi Ho<br />
-              <div class="subtitle">Arijit Singh</div>
-            </h5>
-            <i class="playListPlay fa-solid fa-circle-play" id="1"></i>
-          </li>
-
-          <li class="songItem">
-            <span>04</span>
-            <div class="imgplay">
-              <img src="songs/4.jpg" alt="" />
-              <i class="playListPlay fa-solid fa-circle-play" id="1"></i>
-            </div>
-            <h5>
-              Khairiyat<br />
-              <div class="subtitle">Arijit Singh</div>
-            </h5>
-            <i class="playListPlay fa-solid fa-circle-play" id="1"></i>
-          </li>
-
-          <li class="songItem">
-            <span>05</span>
-            <div class="imgplay">
-              <img src="songs/5.jpg" alt="" />
-              <i class="playListPlay fa-solid fa-circle-play" id="1"></i>
-            </div>
-            <h5>
-              Raabta <br />
-              <div class="subtitle">Arijit Singh</div>
-            </h5>
-            <i class="playListPlay fa-solid fa-circle-play" id="1"></i>
-          </li>
-
-          <li class="songItem">
-            <span>06</span>
-            <div class="imgplay">
-              <img src="songs/6.jpg" alt="" />
-              <i class="playListPlay fa-solid fa-circle-play" id="1"></i>
-            </div>
-            <h5>
-              Tera Fitoor<br />
-              <div class="subtitle">Arijit Singh</div>
-            </h5>
-            <i class="playListPlay fa-solid fa-circle-play" id="1"></i>
-          </li>
-
-          <li class="songItem">
-            <span>07</span>
-            <div class="imgplay">
-              <img src="songs/7.jpg" alt="" />
-              <i class="playListPlay fa-solid fa-circle-play" id="1"></i>
-            </div>
-            <h5>
-              Gerua<br />
-              <div class="subtitle">Arijit Singh</div>
-            </h5>
-            <i class="playListPlay fa-solid fa-circle-play" id="1"></i>
-          </li>
-
-          <li class="songItem">
-            <span>08</span>
-            <div class="imgplay">
-              <img src="songs/8.jpg" alt="" />
-              <i class="playListPlay fa-solid fa-circle-play" id="1"></i>
-            </div>
-            <h5>
-              Zaalima<br />
-              <div class="subtitle">Arijit Singh</div>
-            </h5>
-            <i class="playListPlay fa-solid fa-circle-play" id="1"></i>
-          </li>
-        </div>
-      </div>
       <div class="master-play">
         <div class="wave">
           <div class="wave1"></div>
@@ -700,5 +564,7 @@
         </div>
       </div>
     </header>
+
+    <script></script>
   </body>
 </html>
