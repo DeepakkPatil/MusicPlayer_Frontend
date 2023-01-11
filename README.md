@@ -5,6 +5,7 @@
  
  </div>
 
+<h2> Deployed App : <a href="https://music-clone-deepak.netlify.app/">MusicApp</a></h2>
 <h1><u>Responsive Music Player Using HTML & CSS Only (No Bootstrap)</u></h1>
 
 <h4>Desktop View (>=850px)</h4>
