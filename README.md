@@ -1,13 +1,19 @@
  <div align="center">
  
-  ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
-  ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+  <img src="https://i.ibb.co/TgbrjTg/translogo-Dark.png" width="200" />
+ <br />
+ <br />
+ 
+
  
  </div>
 
 <h2> Deployed App : <a href="https://music-clone-deepak.netlify.app/">MusicApp</a></h2>
 <h1><u>Responsive Music Player Using HTML & CSS Only (No Bootstrap)</u></h1>
 
+  ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+  ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+  
 <h4>Desktop View (>=850px)</h4>
 
 ![m1](https://user-images.githubusercontent.com/108725514/193111716-b8503049-cf78-4044-9506-18586f58070a.png)
